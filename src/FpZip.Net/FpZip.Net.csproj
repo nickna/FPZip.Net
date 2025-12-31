@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>FpZip</RootNamespace>
+    <AssemblyName>FpZip.Net</AssemblyName>
+    <!-- AOT and Trimming Compatibility -->
+    <IsAotCompatible>true</IsAotCompatible>
+    <IsTrimmable>true</IsTrimmable>
+    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+  </PropertyGroup>
+
+  <!-- NuGet Package Metadata -->
+  <PropertyGroup>
+    <!-- Package Identity -->
+    <PackageId>FpZip.Net</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Nick B. Nassiri</Authors>
+
+    <!-- Package Description -->
+    <Description>Pure managed C# implementation of the FPZip floating-point compression algorithm. Provides lossless compression for multi-dimensional float and double arrays, optimized for scientific and numerical data with high spatial correlation.</Description>
+    <PackageTags>compression;fpzip;floating-point;scientific-computing;numerical-data;lossless;array-compression</PackageTags>
+    <PackageProjectUrl>https://github.com/knnlabs/fpzip</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/knnlabs/fpzip.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReleaseNotes>Initial release of FpZip.Net - pure C# implementation targeting .NET 10.0</PackageReleaseNotes>
+
+    <!-- Additional Metadata -->
+    <Copyright>Copyright (c) 2024 Nick B. Nassiri. Original FPZip algorithm by Lawrence Livermore National Laboratory.</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <!-- XML Documentation Generation -->
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <!-- Source Link Configuration (for debugging) -->
+  <PropertyGroup>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <!-- Deterministic Build (for CI/CD) -->
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+
+  <!-- Package Files -->
+  <ItemGroup>
+    <None Include="../../../LICENSE" Pack="true" PackagePath="/" />
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+  <!-- Dependencies -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
