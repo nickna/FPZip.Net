@@ -24,15 +24,15 @@
     <!-- Package Description -->
     <Description>Pure managed C# implementation of the FPZip floating-point compression algorithm. Provides lossless compression for multi-dimensional float and double arrays, optimized for scientific and numerical data with high spatial correlation.</Description>
     <PackageTags>compression;fpzip;floating-point;scientific-computing;numerical-data;lossless;array-compression</PackageTags>
-    <PackageProjectUrl>https://github.com/knnlabs/fpzip</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/knnlabs/fpzip.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/nickna/fpzip.net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nickna/FPZip.Net.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReleaseNotes>Initial release of FpZip.Net - pure C# implementation targeting .NET 10.0</PackageReleaseNotes>
 
     <!-- Additional Metadata -->
-    <Copyright>Copyright (c) 2024 Nick B. Nassiri. Original FPZip algorithm by Lawrence Livermore National Laboratory.</Copyright>
+    <Copyright>Copyright (c) 2026 Nick Nassiri. Original FPZip algorithm by Peter Lindstrom at Lawrence Livermore National Laboratory</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
