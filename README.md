@@ -1,4 +1,5 @@
 # FpZip.Net
+<img width="2815" height="1536" alt="Gemini_Generated_Image_crb1vqcrb1vqcrb1" src="https://github.com/user-attachments/assets/faeaf77b-d580-4a08-946f-7efe6ad9074a" />
 
 A pure managed C# implementation of the FPZip floating-point compression algorithm. This library provides lossless compression for multi-dimensional float and double arrays, optimized for scientific and numerical data.
 
@@ -151,7 +152,7 @@ All multi-byte values are little-endian.
 
 ## License
 
-This is a clean-room implementation based on the FPZip algorithm. The original FPZip library is available at https://github.com/LLNL/fpzip.
+This is a port of the FPZip C++ algorithm. The original library is available at https://github.com/LLNL/fpzip.
 
 ## Acknowledgments
 
